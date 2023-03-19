@@ -411,7 +411,7 @@ namespace CheatEnabler
         [Command]
         private void Sethealth(int health)
         {
-            if (health > Player.Instance.GetStat(StatType.Mana))
+            if (health > Player.Instance.GetStat(StatType.Health))
             {
                 Setstat("health", health);
             }
