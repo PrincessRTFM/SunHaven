@@ -1108,7 +1108,7 @@ namespace CheatEnabler
             var vector2 = lower switch
             {
                 "playerhouse1" => new Vector2(48f, 68f),
-                "Tier1House0" => new Vector2(48f, 68f),
+                "tier1house0" => new Vector2(48f, 68f),
                 "throneroom" => new Vector2(21.36f, -2f),
                 "forest" => new Vector2(21.67f, 7.5f),
                 "portalroom" => new Vector2(23.5f, 14.14214f),
@@ -1120,7 +1120,8 @@ namespace CheatEnabler
                 "town5" => new Vector2(67.41667f, 306.7076f),
                 "withergaterooftopfarm" => new Vector2(126.125f, 83.6743f),
                 "foresta" => new Vector2(284.7917f, 355.3212f),
-                _ => (lower == "nelvari6" ? new Vector2(320.3333f, 98.76098f) : Vector2.zero)
+                "nelvari6" => new Vector2(320.3333f, 98.76098f),
+                _ => Vector2.zero,
             };
 
             SingletonBehaviour<ScenePortalManager>.Instance.ChangeScene(vector2, sceneName, null, null, () =>
